@@ -1,0 +1,28 @@
+/* MonaSans Medium */
+@font-face {
+  font-family: "MonaSans";
+  src: url("../../public/assets/font/MonaSans-Medium.woff2") format("woff2"),
+       url("../../public/assets/font/MonaSans-Medium.woff") format("woff"),
+       url("../../public/assets/font/MonaSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* MonaSans Expanded Regular */
+@font-face {
+  font-family: "MonaSansExpanded";
+  src: url("../../public/assets/font/MonaSansExpanded-Regular.woff2") format("woff2"),
+       url("../../public/assets/font/MonaSansExpanded-Regular.woff") format("woff"),
+       url("../../public/assets/font/MonaSansExpanded-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Example usage */
+body {
+  font-family: "MonaSans", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "MonaSansExpanded", sans-serif;
+}
