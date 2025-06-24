@@ -420,7 +420,7 @@ function setupCertificateScroller() {
     
     // --- RESPONSIVE SCROLL SPEED ---
     function adjustScrollSpeed() {
-         scrollSpeed = window.innerWidth > 752 ? 0.8 : 0.5;
+         scrollSpeed = window.innerWidth > 752 ? 0.8 : 0.6;
     }
 
     window.addEventListener('resize', () => {
