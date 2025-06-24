@@ -1,10 +1,10 @@
 @font-face {
     font-family: MonaSansExpanded;
-    src: url(/public/assets/font/MonaSansExpanded-Regular.woff2) format("woff2"), url(/public/assets/font/MonaSansExpanded-Regular.woff) format("woff"), url(/public/assets/font/MonaSansExpanded-Regular.ttf) format("truetype");
+    src: url(public/assets/font/MonaSansExpanded-Regular.woff2) format("woff2"), url(public/assets/font/MonaSansExpanded-Regular.woff) format("woff"), url(public/assets/font/MonaSansExpanded-Regular.ttf) format("truetype");
 }
 @font-face {
     font-family: MonaSansMedium;
-    src: url(/public/assets/font/MonaSans-Medium.woff2) format("woff2"), url(/public/assets/font/MonaSans-Medium.woff) format("woff"), url(/public/assets/font/MonaSans-Medium.ttf) format("truetype");
+    src: url(public/assets/font/MonaSans-Medium.woff2) format("woff2"), url(public/assets/font/MonaSans-Medium.woff) format("woff"), url(public/assets/font/MonaSans-Medium.ttf) format("truetype");
 }
 :root {
     --dark: #212121;
