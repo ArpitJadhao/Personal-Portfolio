@@ -1,4 +1,4 @@
-/* === GLOBAL LAYOUT FIX === */
+/* === GLOBAL FIX: Remove Horizontal Overflow === */
 html, body {
   overflow-x: hidden !important;
   margin: 0;
@@ -10,65 +10,77 @@ html, body {
   box-sizing: border-box;
 }
 
-/* === CONTAIN LAYOUT ISSUES === */
-body,
-main,
-section,
-header,
-footer {
-  overflow-x: hidden !important;
-  max-width: 100vw;
+/* === Ensure All Sections Stay Within Screen === */
+section, header, footer, main {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-/* === FIX OVERFLOW FROM NAV AND MAIN CONTENT === */
-.nav-section,
-.hero-container,
-.about-content-wrapper,
-.projects-container,
-.contact-form {
-  max-width: 100% !important;
-  overflow-x: hidden !important;
-}
-
-/* === DO NOT BREAK CERTIFICATE SCROLL === */
+/* === CERTIFICATES: Scrollable but No Scrollbar === */
 .certificates-scroll-container {
   overflow-x: auto !important;
-  white-space: nowrap !important;
+  overflow-y: hidden;
+  white-space: nowrap;
   max-width: 100%;
+  padding-bottom: 10px;
   margin-bottom: 20px;
   -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
-/* === DO NOT TOUCH CERTIFICATE CARD SIZE === */
-/* Keep your own size from main CSS */
+.certificates-scroll-container::-webkit-scrollbar {
+  display: none;
+}
 
-/* === Fix project card breaking width on mobile === */
+.certificates-scroll-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* === Project Card Safe Width === */
 .project-card {
   max-width: 100%;
   overflow-wrap: break-word;
 }
 
-/* === Prevent nav scroll (desktop) === */
-nav ul {
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-/* === Optional: Fix hero padding on small screen === */
-@media screen and (max-width: 480px) {
-  .hero {
-    padding-left: 15px;
-    padding-right: 15px;
+/* === Desktop Nav Wrap Fix === */
+@media screen and (min-width: 992px) {
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    overflow: hidden;
   }
 }
 
-.certificates-scroll-container {
-  scrollbar-width: none;          /* Firefox */
-  -ms-overflow-style: none;       /* IE/Edge */
+/* === ✅ NAVIGATION LINK UNDERLINE FIX === */
+.nav-section li a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
 }
 
-.certificates-scroll-container::-webkit-scrollbar {
-  display: none;                  /* Chrome/Safari */
+/* Create hidden underline */
+.nav-section li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0%;
+  background-color: #ffffff; /* Your active link underline color */
+  transition: width 0.3s ease;
+}
+
+/* Show underline on hover */
+.nav-section li a:hover::after {
+  width: 100%;
+}
+
+/* Show underline for active section link */
+.nav-section li a.active::after {
+  width: 100%;
 }
