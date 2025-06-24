@@ -1,57 +1,74 @@
-/* === Global Scroll and Layout Fixes === */
+/* === GLOBAL LAYOUT FIX === */
 html, body {
   overflow-x: hidden !important;
-  max-width: 100vw;
   margin: 0;
   padding: 0;
+  max-width: 100vw;
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* === Fix for sections that were breaking layout === */
+/* === CONTAIN LAYOUT ISSUES === */
+body,
+main,
+section,
+header,
+footer {
+  overflow-x: hidden !important;
+  max-width: 100vw;
+}
+
+/* === FIX OVERFLOW FROM NAV AND MAIN CONTENT === */
 .nav-section,
 .hero-container,
 .about-content-wrapper,
-.contact-form,
-footer {
+.projects-container,
+.contact-form {
   max-width: 100% !important;
   overflow-x: hidden !important;
 }
 
-/* === Keep certificates scrollable === */
+/* === DO NOT BREAK CERTIFICATE SCROLL === */
 .certificates-scroll-container {
   overflow-x: auto !important;
   white-space: nowrap !important;
   max-width: 100%;
+  margin-bottom: 20px;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* === Ensure certificate cards behave responsively inside scroll container === */
-.certificate-card {
-  display: inline-block;
-  max-width: 90vw;
-  height: auto;
-  margin-right: 15px;
-}
+/* === DO NOT TOUCH CERTIFICATE CARD SIZE === */
+/* Keep your own size from main CSS */
 
-/* === Prevent project card overflows === */
+/* === Fix project card breaking width on mobile === */
 .project-card {
-  max-width: 100% !important;
+  max-width: 100%;
   overflow-wrap: break-word;
 }
 
-/* === Image and video responsiveness === */
-img, video {
+/* === Prevent nav scroll (desktop) === */
+nav ul {
+  flex-wrap: wrap;
+  justify-content: center;
   max-width: 100%;
-  height: auto;
-  display: block;
+  overflow: hidden;
 }
 
-/* === Responsive fix for hero padding on small screens === */
+/* === Optional: Fix hero padding on small screen === */
 @media screen and (max-width: 480px) {
   .hero {
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+
+.certificates-scroll-container {
+  scrollbar-width: none;          /* Firefox */
+  -ms-overflow-style: none;       /* IE/Edge */
+}
+
+.certificates-scroll-container::-webkit-scrollbar {
+  display: none;                  /* Chrome/Safari */
 }
