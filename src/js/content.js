@@ -167,9 +167,9 @@ function startFSASlideshow() {
     if (!fsaImage) return;
 
     const imageUrls = [
-        '/public/assets/projects/project2-0.webp',
-        '/public/assets/projects/project2-1.webp',
-        '/public/assets/projects/project2-2.webp'
+        'public/assets/projects/project2-0.webp',
+        'public/assets/projects/project2-1.webp',
+        'public/assets/projects/project2-2.webp'
     ];
     let currentImageIndex = 0;
 
