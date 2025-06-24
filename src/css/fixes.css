@@ -27,11 +27,11 @@ html, body {
 
 /* === Optional Debugging Outline === */
 /* Uncomment if needed for debugging overflows */
-
+/*
 * {
   outline: 1px solid red;
 }
-
+*/
 
 /* === Prevent Oversized Project Cards === */
 .project-card {
@@ -45,4 +45,35 @@ html, body {
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.nav-section,
+.hero-container,
+.project-card,
+.about-content-wrapper,
+.contact-form,
+footer {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Keep certificate scroll working */
+.certificates-scroll-container {
+  overflow-x: auto !important;
+  white-space: nowrap !important;
 }
