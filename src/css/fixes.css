@@ -27,11 +27,11 @@ html, body {
 
 /* === Optional Debugging Outline === */
 /* Uncomment if needed for debugging overflows */
-/*
+
 * {
   outline: 1px solid red;
 }
-*/
+
 
 /* === Prevent Oversized Project Cards === */
 .project-card {
