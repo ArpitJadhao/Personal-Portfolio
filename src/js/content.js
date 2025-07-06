@@ -226,14 +226,15 @@ function animateWebsiteButtons() {
 document.addEventListener('DOMContentLoaded', function() {
     // ---- Generate Skills List ----
     const skillsData = [
-        { name: 'Python', level: 4, description: 'Automation, data analysis, GUI applications with Tkinter' },
-        { name: 'HTML/CSS/JS', level: 4, description: 'Game development with Unreal Engine, data structures, algorithms' },
-        { name: 'Machine Learning', level: 2, description: 'Game mechanics, level design, blueprints, C++ integration' },
-        { name: 'C/C++', level: 3, description: 'Web development, interactive features, DOM manipulation' },
-        { name: 'SQL', level: 3, description: 'Responsive design, modern layouts, animations' },
-        { name: 'Git/Github', level: 3, description: 'Game prototyping, mobile development, C# integration' },
-        { name: 'PowerBI/Tableau', level: 4, description: 'Version control, collaboration, project management' },
-        { name: 'Google Colab', level: 2, description: 'Database design, queries, data management' }
+        { name: 'Python', level: 4, description: 'Data analysis, automation scripts, backend development, basic ML' },
+        { name: 'HTML/CSS/JS', level: 4, description: 'Responsive web design, interactive frontend development, DOM manipulation' },
+        { name: 'Machine Learning', level: 2, description: 'Basic ML models using scikit-learn, supervised learning, data preprocessing' },
+        { name: 'C/C++', level: 3, description: 'DSA practice, competitive programming, system-level concepts' },
+        { name: 'SQL', level: 3, description: 'Database querying, joins, aggregation, data filtering and reporting' },
+        { name: 'Git/Github', level: 3, description: 'Version control, branching, collaboration on projects' },
+        { name: 'PowerBI/Tableau', level: 4, description: 'Data visualization, dashboards, report creation and insights' },
+        { name: 'Google Colab', level: 2, description: 'Python notebooks for data analysis and ML model prototyping' }
+
     ];
 
     const skillsContainer = document.querySelector('.skills-container');
